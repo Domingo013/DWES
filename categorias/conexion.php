@@ -6,7 +6,7 @@
 		private $bbdd="user2daw_BD1-08";
 
 		public function conexion(){
-			$conexion = mysqli_connect($this->servidor, $this->usuario, $this->contrasenia, $this->bbdd);
+			$conexion = new mysqli ($this->servidor, $this->usuario, $this->contrasenia, $this->bbdd);
 			
             return $conexion;
 		}
