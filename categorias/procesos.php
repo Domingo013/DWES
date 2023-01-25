@@ -4,7 +4,7 @@
             $conexion = new Conexion();
             $conexion = $conexion->conexion();
 
-            $resultado = mysqli_query($conexion, $sql);
+            $resultado = $conexion->query($sql);
 
             return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
         }
@@ -14,7 +14,7 @@
             $conexion = $conexion->conexion();
 
             $sql = "INSERT INTO ac_categorias (nombre) VALUES('".$nombre."');";
-            $resultado = mysqli_query($conexion, $sql);
+            $resultado = $conexion->query($sql);
 
             return $resultado;
         }
@@ -24,7 +24,7 @@
             $conexion = $conexion->conexion();
 
             $sql = "DELETE FROM ac_categorias WHERE id=".$id.";";
-            $resultado = mysqli_query($conexion, $sql);
+            $resultado = $conexion->query($sql);
 
             return $resultado;
         }
@@ -34,7 +34,7 @@
             $conexion = $conexion->conexion();
 
             $sql = "SELECT nombre from ac_categorias WHERE id=$id;";
-            $resultado = mysqli_query($conexion, $sql);
+            $resultado = $conexion->query($sql);
 
             return $resultado;
         }
@@ -44,7 +44,7 @@
             $conexion = $conexion->conexion();
 
             $sql = 'UPDATE ac_categorias SET nombre = "'.$nombre.'" WHERE id = '.$id.';';
-            $resultado = mysqli_query($conexion, $sql);
+            $resultado = $conexion->query($sql);
 
             return $resultado;
         }
