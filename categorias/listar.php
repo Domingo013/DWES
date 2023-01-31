@@ -21,7 +21,7 @@
 				<?php	
 					$procesos = new Procesos();
 					
-					$sql = "SELECT id, nombre FROM ac_categorias;";
+					$sql = "SELECT id, nombre FROM categorias;";
 					$resultado = $procesos->listar($sql);	
 
 					foreach($resultado as $mostrar){

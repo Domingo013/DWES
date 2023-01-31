@@ -8,7 +8,9 @@
 
     echo 'id: "'.$id.'" con nombre: "'.$nombre2.'", ';
 
-    if($consulta->modificar($id, $nombre2)){
+    if($nombre2 == ''){
+        echo 'No se puede introducir una categoría en blanco. <a href="listar.php">Volver al listado<a>';
+    }elseif($consulta->modificar($id, $nombre2)){
         echo 'Se ha modificado correctamente. <a href="listar.php">Inicio</a>';
         // header('Location: listar.php'); // En el caso de poner el header location, nos llevaría directamente a la vista listar sin avisarnos
     }

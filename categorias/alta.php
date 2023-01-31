@@ -7,11 +7,13 @@
 
     echo 'Nombre: "'.$nombre.'", ';
 
-    if($consulta->alta($nombre)){
+    
+    if($nombre == ''){
+        echo 'No se puede introducir una categoría en blanco. <a href="formulario.php">Volver<a>';
+    }elseif($consulta->alta($nombre)){
         echo 'Se ha añadido correctamente. <a href="listar.php">Inicio</a>';
         // header('Location: listar.php'); // En el caso de poner el header location, nos llevaría directamente a la vista listar sin avisarnos
-    }
-    else{
+    }else{
         echo 'No se ha podido añadir por culpa de un error. <a href="formulario.php">Volver</a>';
     }
 ?>
