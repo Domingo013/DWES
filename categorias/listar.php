@@ -1,5 +1,5 @@
 <?php
-    //require_once "conexion.php";
+    require_once "conexion.php";
     require_once "procesos.php";
 ?>
 <!DOCTYPE html>
@@ -18,20 +18,25 @@
 				<th>NOMBRE</th>
 				<th>ELIMINAR</th>
 				<th>MODIFICAR</th>
-				<?php	
+				<?php
 					$procesos = new Procesos();
 					
 					$sql = "SELECT id, nombre FROM categorias;";
 					$resultado = $procesos->listar($sql);	
 
-					foreach($resultado as $mostrar){
-						echo '	<tr>	
-									<td>'.$mostrar['id'].'</td>
-									<td>'.$mostrar['nombre'].'</td>
-									<td><a href="baja.php?id='.$mostrar["id"].'">🗑</a></td>
-									<td><a href="formulario_modificar.php?id='.$mostrar["id"].'">✏</a></td>
-								</tr>';
-					}
+					if($resultado == ''){
+						echo "<h1>No hay categorías creadas</h1>";
+					}else{
+						foreach($resultado as $mostrar){
+							echo '	<tr>	
+										<td>'.$mostrar['id'].'</td>
+										<td>'.$mostrar['nombre'].'</td>
+										<td><a href="baja.php?id='.$mostrar["id"].'">🗑</a></td>
+										<td><a href="formulario_modificar.php?id='.$mostrar["id"].'">✏</a></td>
+									</tr>';
+						};
+					};
+					
 				?>
 			</table><br>
 			<a href="formulario.php" class="boton">

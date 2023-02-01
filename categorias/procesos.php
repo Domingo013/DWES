@@ -12,8 +12,8 @@
 
         // 
         public function listar($sql){
-            //$conexion = new Conexion();
-            //$conexion = $conexion->conexion();
+            $conexion = new Conexion();
+            $conexion = $conexion->conexion();
            
             $resultado = $conexion->query($sql);
             
@@ -28,9 +28,15 @@
                 $sql = "INSERT INTO categorias (nombre) VALUES('".$nombre."');";
                 $resultado = $conexion->query($sql);
                 return $resultado;
-            }catch(Throwable $e){
-                echo $e->getMessage();//'No se puede introducir un nombre repetido';
-            }
+            }catch(Exception $e){
+                //echo $e->getMessage();
+                //echo $e->getCode();
+                if($e->getCode()=='1062'){
+                    echo 'No puedes añadir una categoría que ya existe <a href="formulario.php" class="boton">
+                                                                            <span>Volver</span>
+                                                                        </a>';
+                }
+            }die();
         }
 
         // Obtiene el valor del "id" del campo seleccionado y lo elimina de la tabla categorías.
@@ -59,11 +65,20 @@
         public function modificar($id, $nombre){
             $conexion = new Conexion();
             $conexion = $conexion->conexion();
+            try{
+                $sql = 'UPDATE categorias SET nombre = "'.$nombre.'" WHERE id = '.$id.';';
+                $resultado = $conexion->query($sql);
 
-            $sql = 'UPDATE categorias SET nombre = "'.$nombre.'" WHERE id = '.$id.';';
-            $resultado = $conexion->query($sql);
-
-            return $resultado;
+                return $resultado;
+            }catch(Exception $e){
+                //echo $e->getMessage();    // Para visualizar el mensaje de error
+                //echo $e->getCode();       // Para visualizar el código de error
+                if($e->getCode()=='1062'){
+                    echo 'No puedes modificar una categoría por otra que ya existe <a href="formulario_modificar.php?id='.$id.'" class="boton">
+                                                                                        <span>Volver</span>
+                                                                                    </a>';
+                }
+            }
         }
     }
 ?>
