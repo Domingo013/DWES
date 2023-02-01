@@ -1,5 +1,5 @@
 <?php
-    require_once "conexion.php";
+    //require_once "conexion.php";
     require_once "procesos.php";
 
     $nombre = $_POST['nombre'];
@@ -7,7 +7,6 @@
 
     echo 'Nombre: "'.$nombre.'", ';
 
-    
     if($nombre == ''){
         echo 'No se puede introducir una categoría en blanco. <a href="formulario.php">Volver<a>';
     }elseif($consulta->alta($nombre)){

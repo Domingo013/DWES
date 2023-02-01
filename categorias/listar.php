@@ -1,9 +1,9 @@
 <?php
-    require_once "conexion.php";
+    //require_once "conexion.php";
     require_once "procesos.php";
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
         <meta content="autor" value="Domingo Miño Redondo" />

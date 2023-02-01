@@ -1,5 +1,5 @@
 <?php
-    require_once "conexion.php";
+    //require_once "conexion.php";
     require_once "procesos.php";
 
     $id = $_GET['id'];
