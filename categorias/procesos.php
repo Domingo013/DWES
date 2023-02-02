@@ -1,19 +1,22 @@
 <?php
     class Procesos{
+
+        function __construct(){
+            $this->$conexion = $this->conectar();
+        }  
+
         // Realizamos la conexión con el servidor y devolvemos el objeto de la conexión
-        function __construct() {
-            function conexion(){
-                $conexion = new mysqli($this->servidor, $this->usuario, $this->contrasenia, $this->bbdd) or die('No hay conexión');
-                $conexion->set_charset('utf8');
-                
-                return $conexion;
-            }
+        public function conectar(){
+            $conexion = new mysqli(servidor, usuario, contrasenia, bbdd) or die('No hay conexión');
+            $conexion->set_charset('utf8');
+            
+            return $conexion;
         }
 
         // 
         public function listar($sql){
-            $conexion = new Conexion();
-            $conexion = $conexion->conexion();
+            //$conexion = new Conexion();
+            //$conexion = $conexion->conexion();
            
             $resultado = $conexion->query($sql);
             
@@ -22,8 +25,8 @@
         
         // Obtiene el valor del "nombre" introducido y lo guarda en la tabla categorías.
         public function alta($nombre){
-            $conexion = new Conexion();
-            $conexion = $conexion->conexion();
+            //$conexion = new Conexion();
+            //$conexion = $conexion->conexion();
             try{
                 $sql = "INSERT INTO categorias (nombre) VALUES('".$nombre."');";
                 $resultado = $conexion->query($sql);
