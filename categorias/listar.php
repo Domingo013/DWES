@@ -36,7 +36,6 @@
 									</tr>';
 						};
 					};
-					
 				?>
 			</table><br>
 			<a href="formulario.php" class="boton">
