@@ -1,0 +1,266 @@
+html{
+    /* width: 1280px; */
+}
+body{
+    background-color: #dddddd;
+    /*width: 1280px;*/
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #86ada4;
+    /*width: 1240px;                    /* Ancho total = 1280px, padding = 20px, 1280px - 20px * 2 = 1240px*/
+    width: 96.875%;                     /* Ancho total 1280px -> 100%, Ancho total sin padding 1240px -> 96.845% */
+    min-height: 100px;
+    /*padding: 20px;*/              
+    padding: 20px 1.5625%;                   /* Ancho total 1280px -> 100%, Padding 20px -> 1.5625% */
+}
+span#titulo{
+    font-size: 5em;
+    color: white
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Contenido header*/
+img#logo{
+   /* width: 100px;*/                   /* Ancho total utilizable (sin padding) 1240px -> 100%, 100px -> 8.064516129032258% */
+    width: 8.064516129032258%;
+    min-width: 60px;
+    max-width: 100px;
+    height: auto;
+}
+
+/* Contenedor 1*/
+div#contenedor1{
+    background-color: #a3cec4;
+    /*width: 220px;                     /* Ancho total = 300px, padding = 40px, 300px - 40px * 2 = 220px*/
+    width: 17.1875%;                    /* Ancho total 1280px -> 100%, Ancho total sin padding 220px -> 17.1875% */
+    min-width: 140px;
+    min-height: 500px;
+    /*padding: 50px 40px;*/
+    padding: 50px 3.125%;               /* Ancho total = 1280px, padding 40px -> 3.125% */
+    float: left;
+}
+#menu input {
+	display: none;
+}
+i#iconomenu{
+    display: none;
+	position: absolute;
+    font-size: 60px;
+	top: 30px;
+	left: 10px;
+    cursor: pointer;
+}
+div#menuhamb{
+    display: none;
+    position: absolute;
+    top: 140px;
+    left: 0;
+    min-height: 200px;
+    min-width: 150px;
+    background-color: #a3cec4;
+}
+
+/* Contenido contenedor 1*/
+ul#navegador{
+    list-style-type: none;
+    padding: 0;
+}
+ul#navegador li{
+    margin: 20px 0;
+}
+ul#navegador a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+div#contenedor1 p{
+    background-color: rgba(27, 27, 27, .2);
+    /*width: 150px;*/
+    width: 68.1818118%;                 /* Ancho total utilizable (sin padding) 220px -> 100%, Ancho p 150px -> 68.18181818% */
+    min-height: 25px;
+}
+ul#navegador a:hover{
+    color: green;
+}
+
+/* Contenedor 2 */
+div#contenedor2{
+    background-color: #dddddd;
+    /*width: 900px;*/
+    width: 70.3125%;                    /* Ancho total 1280px -> 100%, Ancho div sin padding 900px -> 70.3125% */
+    min-height: 500px;
+    /*padding: 50px 40px;*/
+    padding: 50px 3.125%;               /* Ancho total 1280px -> 100%, padding 40px -> 3.125% */
+    float: left;
+}
+div#contenedor2 h1{
+    text-align: center;
+    margin-top: 0;
+}
+div#contenedor_formulario{
+    background-color: #BFD8D2;
+    /*width: 818px;                     /* Ancho total = 820px, bordes = 1px, 820px - 1px * 2 = 818px*/
+    width: 90.88888888888889%;          /* Ancho total utilizable 900px -> 100%, 818px -> 90.88888888888889% */
+    min-height: 450px;
+    /*padding: 20px;*/
+    padding: 2.173913043478261%;        /* Ancho total utilizable 920px -> 100%, Padding 20px -> 2.173913043478261% */
+    margin: 0 auto;
+    border: 1px solid black;
+    text-align: right;
+}
+div#contenedor_formulario2{
+    background-color: #BFD8D2;
+    display: none;
+    margin: 0 auto;
+    float: none;
+    width: 90.88888888888889%;          /* Ancho total utilizable 900px -> 100%, 818px -> 90.88888888888889% */
+    min-height: 450px;
+    padding: 2.173913043478261%;        /* Ancho total utilizable 920px -> 100%, Padding 20px -> 2.173913043478261% */
+    border: 1px solid black;
+    text-align: right;
+}
+div#contenedor_formulario3{
+    background-color: #BFD8D2;
+    display: none;
+    margin: 0 auto;
+    float: none;
+    width: 90.88888888888889%;          /* Ancho total utilizable 900px -> 100%, 818px -> 90.88888888888889% */
+    min-height: 450px;
+    padding: 2.173913043478261%;        /* Ancho total utilizable 920px -> 100%, Padding 20px -> 2.173913043478261% */
+    border: 1px solid black;
+    text-align: center;
+}
+button:hover, input[type="submit"]:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(27, 27, 27, .5);
+    cursor: pointer;
+}
+
+/* Contenido del formulario */
+input{
+    box-sizing: border-box;
+    min-height: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px -18px;
+    /*padding: 0 10px;*/
+    padding: 0 1.222493887530562%;      /* Ancho total utilizable 818px -> 100%, Padding 10px -> 1.222493887530562% */
+}
+input:hover {
+    border: 2px solid lightgrey;
+    box-shadow: 0px 0px 20px -17px;
+}
+input:active {
+    transform: scale(0.95);
+}
+input[type="text"]{
+    /*width: 600px;*/
+    width: 73.34963325183374%;          /* Ancho total utilizable 818px -> 100%, Ancho input 600px -> 73.34963325183374% */
+}
+input[type="date"]{
+    /*width: 261px;*/
+    width: 31.90709046454768%;          /* Ancho total utilizable 818px -> 100%, Ancho input 261px -> 31.90709046454768% */
+    /*padding: 0 5px;*/
+    padding: 0 0.6112469437652812%;     /* Ancho total utilizable 818px -> 100%, Padding 10px -> 0.6112469437652812% */
+}
+textarea{
+    box-sizing: border-box;
+    /*width: 600px;*/
+    width: 73.34963325183374%;          /* Ancho total utilizable 818px -> 100%, Ancho input 600px -> 73.34963325183374% */
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px -18px;
+    /*padding: 0 10px;*/
+    padding: 0 1.222493887530562%;      /* Ancho total utilizable 818px -> 100%, Padding 10px -> 1.222493887530562% */
+}
+button#btnCancelar{
+    float: left;
+    background-color: red;
+}
+button, input[type="submit"]{
+    /*width: 100px;*/
+    min-width: 12.22493887530562%;      /* Ancho total 818px -> 100%, Ancho boton 100px -> 12.22493887530562% */
+    min-height: 30px;
+    border-radius: 10px;
+}
+#btnAceptar{
+    background-color: green;
+}
+
+#contenedorTabla{
+    background-color: #BFD8D2;
+    width: 90.88888888888889%;
+    min-width: 500px;
+    min-height: 450px;
+    padding: 2.173913043478261%;
+    margin: 0 auto;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#contenedorTabla table, td{
+    background-color: #a3cec4;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+/* Tamaño tablet horizontal (1024-768) */
+@media (max-width: 1024px) {
+    header{
+        text-align: right;
+    }
+    #contenedor1{
+        display: none;
+    }
+    i#iconomenu{
+        display: inline;
+    }
+	#menu input:checked~div {
+		display: inline-block;
+		width: 20%;
+        padding: 10px 20px;
+	}
+    div#contenedor2{
+        margin: 0 auto;
+    }
+    div#contenedor_formulario{
+        display: none;
+    }
+    div#contenedor_formulario2{
+        display: block;
+    }
+    div#contenedor_formulario3{
+        display: none;
+    }
+    input[type="date"]{
+        width: 73.34963325183374%;              /* Ancho total utilizable 818px -> 100%, Ancho input 600px -> 73.34963325183374% */
+        padding: 0 1.222493887530562%;      /* Ancho total utilizable 818px -> 100%, Padding 10px -> 1.222493887530562% */
+    }
+}
+
+/* Tamaño teléfonos (768-menos ) */
+@media (max-width: 768px) {
+    body{
+        min-width: 500px;
+    }
+    div#contenedor2{
+        margin: 0 auto;
+        float: none;
+    }
+    div#contenedor_formulario{
+        display: none;
+    }
+    div#contenedor_formulario2{
+        display: none;
+    }
+    div#contenedor_formulario3{
+        display: block;
+    }
+}
