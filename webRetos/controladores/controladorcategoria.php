@@ -28,12 +28,12 @@
         public function eliminar($id){
             $resultado = $this->modelo->eliminarCategoria($id);
 
-            header('../vistas/listar_categoria.php');
+            header('Location:../vistas/listar_categoria.php');
 
         }
 
         /** Modificar */
-
+        
 
     }
 

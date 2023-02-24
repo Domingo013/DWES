@@ -15,7 +15,7 @@
             return $conexion;
         }
 
-        // 
+        // Obtiene los valores de la base de datos
         public function listar($sql){
             $resultado = $this->conexion->query($sql);
             

@@ -20,7 +20,7 @@ class ModeloCategorias {
         return $conexion;
     }
 
-    /** Obtener las categorias */
+    /** Listar las categorias */
     public function listar(){
         try{
             $sql = "SELECT id, nombre FROM categorias;";
@@ -64,10 +64,8 @@ class ModeloCategorias {
         return $resultado;
     }
 
-    /** Obtiene el valor del "id" del campo seleccionado, se realiza un select para seleccionar el campo nombre de esa fila y lo devuelve. */
-
-
     /** MODIFICAR RETO: Obtiene el valor del "id" y del "nombre" introducido y actualiza el dato de la fila seleccionada anteriormente de la tabla categorías. */
+    
 
 }
 

@@ -54,9 +54,9 @@
 					$controlador = new ControladorCategorias();
 					$resultado = $controlador->listar();
 					
-					if(isset($_GET['nombre']) && isset($_GET['id'])){
-						echo '<h3>¿De verdad quieres eliminar la categoría '.$_GET['nombre'].'?</h3>
-						<a href="./eliminar_categoria.php?id='.$_GET['nombre'].'"><button>SÍ</button></a>
+					if(isset($_GET['id'])){
+						echo '<h3>¿De verdad quieres eliminar la categoría </h3>
+						<a href="./eliminar_categoria.php?id='.$_GET['id'].'"><button>SÍ</button></a>
 						<a href="./listar_categoria.php"><button>NO</button></a>';
 					}else{
 						$resultado = $controlador->listar();
@@ -73,7 +73,7 @@
 								echo '<tr>
 										<td>'.$fila['id'].'</td>
 										<td>'.$fila['nombre'].'</td>
-										<td><a href="./listar_categoria.php?nombre='.$fila['nombre'].'$id='.$fila['id'].'">🗑</a></td>
+										<td><a href="./listar_categoria.php?id='.$fila["id"].'"">🗑</a></td>
 										<td><a href="./formulario_modificar.php?nombre='.$fila["nombre"].'$id='.$fila['id'].'">✏</a></td>';
 							}
 						}else{
