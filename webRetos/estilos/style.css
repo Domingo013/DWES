@@ -143,6 +143,20 @@ button:hover, input[type="submit"]:hover{
     cursor: pointer;
 }
 
+/* Div de bienvenida */
+div#bien{
+    background-color: #dddddd;
+    /*width: 220px;                     /* Ancho total = 300px, padding = 40px, 300px - 40px * 2 = 220px*/
+    width: 45.1875%;                    /* Ancho total 1280px -> 100%, Ancho total sin padding 220px -> 17.1875% */
+    margin-left: 180px;
+    min-width: 140px;
+    min-height: 500px;
+    /*padding: 50px 40px;*/
+    padding: 50px 3.125%;               /* Ancho total = 1280px, padding 40px -> 3.125% */
+    float: left;
+    text-align: center;
+}
+
 /* Contenido del formulario */
 input{
     box-sizing: border-box;

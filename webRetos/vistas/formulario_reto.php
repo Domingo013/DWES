@@ -10,8 +10,10 @@
     </head>
     <body>
         <header>
-            <img src="../assets/logo.png" id="logo" />
-            <span id="titulo">Retos.evg</span>
+            <a href="../index.html">
+                <img src="../assets/logo.png" id="logo" />
+                <span id="titulo">Retos.evg</span>
+            </a>
         </header>
         <label id="menu">
             <input type="checkbox" />
