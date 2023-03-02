@@ -5,7 +5,7 @@
     
     echo 'Nombre: "'.$nombre.'", ';
     if(empty ($_POST['nombre'])){
-        echo 'No se puede introducir una categoría en blanco. <a href="./formulario.php">Volver<a>';
+        echo 'No se puede introducir una categoría en blanco. <a href="./formulario_categoria.php">Volver<a>';
     }else{
         $controlador = new ControladorCategorias();
         $consulta = $controlador->alta($nombre);

@@ -32,6 +32,13 @@
 
         }
 
+        /* Nombre 2 */
+        public function nombre2($id){
+            $resultado = $this->modelo->nombre2Categoria($id);
+
+            return $resultado;
+        }
+
         /** Modificar */
         
 

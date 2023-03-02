@@ -64,6 +64,14 @@ class ModeloCategorias {
         return $resultado;
     }
 
+    /* Nombre 2 */
+    public function nombre2Categoria($id){
+        $sql = "SELECT nombre from categorias WHERE id=$id;";
+        $resultado = $this->conexion->query($sql);
+        
+        return $resultado;
+    }
+
     /** MODIFICAR RETO: Obtiene el valor del "id" y del "nombre" introducido y actualiza el dato de la fila seleccionada anteriormente de la tabla categorías. */
     
 
